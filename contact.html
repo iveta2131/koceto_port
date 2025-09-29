@@ -36,9 +36,12 @@
         <label>Съобщение:<br>
           <textarea name="message" rows="5" required></textarea>
         </label><br>
-        <label>
-          <input type="checkbox" required> Съгласен съм с условията
-        </label><br>
+        <div class="form-group checkbox-group">
+  <input type="checkbox" id="agree" name="agree" required>
+  <label for="agree">Съгласен съм с условията за защита на лични данни *</label>
+</div>
+
+
         <button type="submit">Изпрати</button>
       </form>
     </section>
