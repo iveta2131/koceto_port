@@ -1,0 +1,251 @@
+:root {
+  --main-color: #3f51b5;      /* Modern синьо */
+  --accent-color: #ff4081;    /* Акцентен розов */
+  --bg-color: #f9f9fb;        /* Светъл фон */
+  --text-color: #212121;
+  --heading-color: #1a237e;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+header {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+nav ul li.active a {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.profile-photo,
+.about-flex img {
+  border-radius: 10px;
+  max-width: 100%;
+  width: 250px;
+}
+
+.intro,
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about-flex div,
+.intro div {
+  flex: 1;
+}
+
+h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--heading-color);
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contact-form button {
+  background: var(--main-color);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #303f9f;
+}
+
+footer {
+  background: var(--main-color);
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+footer .social {
+  margin-top: 8px;
+}
+
+footer .social a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .social a:hover {
+  text-decoration: underline;
+}
+
+/* Google map section */
+.map iframe {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .intro, .about-flex {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
