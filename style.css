@@ -249,3 +249,40 @@ footer .social a:hover {
   0% { opacity: 0; transform: translateY(-10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
+
+.checkbox-group {
+  display: flex;
+  align-items: center;   /* изравнява по хоризонтала */
+
+  cursor: pointer;
+}
+
+.label input {
+  vertical-align: middle;
+}
+.label span {
+  vertical-align: middle;
+}
+
+
+.checkbox-group {
+  display: flex;
+  align-items: center;   /* изравнява чекбокса и текста на една линия */
+  gap: 0.5rem;           /* малко разстояние между тях */
+  cursor: pointer;
+}
+
+.checkbox-group input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-color); /* оцветява чекбокса */
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
